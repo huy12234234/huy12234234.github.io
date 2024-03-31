@@ -1,0 +1,178 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #345B63;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    font-size: 24px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #345B63;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1 1 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+}
+
+.author {
+    font-style: italic;
+    color: #777;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background: #345B63;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    clear: both;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media(max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1,
+    nav ul {
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        float: none;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #345B63;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .gallery-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
